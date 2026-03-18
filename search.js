@@ -104,7 +104,9 @@ seriesList(animeSeries);
 let inp = document.querySelector("input");
 inp.addEventListener("input", function () {
  let newseries = animeSeries.filter(function (hulu) {
-  return hulu.seriesName.toLowerCase().includes(inp.value.toLowerCase());
+   let value = inp.value.toLowerCase();
+  return hulu.seriesName.toLowerCase().includes(value);
+  // return hulu.seriesName.toLowerCase().includes(inp.value.toLowerCase();
  })
  document.querySelector(".series-content").innerHTML = "";
  seriesList(newseries);
